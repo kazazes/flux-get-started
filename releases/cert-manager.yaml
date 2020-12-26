@@ -6,13 +6,13 @@ metadata:
   namespace: demo
   annotations:
     fluxcd.io/automated: "true"
-    fluxcd.io/tag.chart-image: semver:~v1.1.0
+    fluxcd.io/tag.chart-image: semver:~1.1.0
 spec:
   releaseName: cert-manager
   chart:
     repository: https://charts.jetstack.io
     name: jetstack/cert-manager
-    version: v1.1.0
+    version: 1.1.0
   values:
     image:
       repository: quay.io/jetstack/cert-manager-controller
