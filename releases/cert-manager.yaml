@@ -6,17 +6,17 @@ metadata:
   namespace: demo
   annotations:
     fluxcd.io/automated: "true"
-    fluxcd.io/tag.chart-image: semver:~1.1.0
+    fluxcd.io/tag.chart-image: v1.1.0
 spec:
   releaseName: cert-manager
   chart:
     repository: https://charts.jetstack.io
     name: jetstack/cert-manager
-    version: 1.1.0
+    version: v1.1.0
   values:
     image:
       repository: quay.io/jetstack/cert-manager-controller
-      tag: v1.1.0
+      tag: canary
     tag: 4
     rbac:
       create: true
