@@ -7,9 +7,10 @@ metadata:
 spec:
   releaseName: cert-manager
   interval: 1m
-  sourceRef:
-    chart: cert-manager
-    version: '1.1.x'
+  chart:
+    sourceRef:
+      chart: cert-manager
+      version: '1.1.x'
   values:
     image:
       repository: quay.io/jetstack/cert-manager-controller
