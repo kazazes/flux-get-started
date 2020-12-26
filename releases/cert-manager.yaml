@@ -9,14 +9,13 @@ metadata:
     fluxcd.io/tag.chart-image: v1.1.0
 spec:
   releaseName: cert-manager
-  chart:
-    repository: https://charts.jetstack.io
-    name: jetstack/cert-manager
-    version: v1.1.0
+  interval: 720m
+  url: https://github.com/stefanprodan/podinfo
+  ref:
+    branch: release-1.2
   values:
     image:
       repository: quay.io/jetstack/cert-manager-controller
-      tag: v1.1.0
-    tag: 4
+      tag: canary
     rbac:
       create: true
