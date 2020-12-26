@@ -4,15 +4,14 @@ kind: HelmRelease
 metadata:
   name: cert-manager
   namespace: demo
-  annotations:
-    fluxcd.io/automated: "true"
-    fluxcd.io/tag.chart-image: v1.1.0
 spec:
   releaseName: cert-manager
-  interval: 720m
-  url: https://github.com/stefanprodan/podinfo
-  ref:
-    branch: release-1.2
+  interval: 1m
+  sourceRef:
+    kind: HelmRepository
+    name: cert-manager
+    namespace: flux-system
+    version: >=1.1.0
   values:
     image:
       repository: quay.io/jetstack/cert-manager-controller
